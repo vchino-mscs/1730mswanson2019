@@ -258,7 +258,7 @@
             this.txtUSDAustralia.TabStop = false;
             this.txtUSDAustralia.Text = "0.00";
             this.txtUSDAustralia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtUSDAustralia.TextChanged += new System.EventHandler(this.TxtUSDAustralia_TextChanged);
+            this.txtUSDAustralia.TextChanged += new System.EventHandler(this.usdTextChanged);
             // 
             // label7
             // 
@@ -279,6 +279,7 @@
             this.txtUSDBhutan.TabStop = false;
             this.txtUSDBhutan.Text = "0.00";
             this.txtUSDBhutan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUSDBhutan.TextChanged += new System.EventHandler(this.usdTextChanged);
             // 
             // txtUSDCostaRica
             // 
@@ -290,6 +291,7 @@
             this.txtUSDCostaRica.TabStop = false;
             this.txtUSDCostaRica.Text = "0.00";
             this.txtUSDCostaRica.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUSDCostaRica.TextChanged += new System.EventHandler(this.usdTextChanged);
             // 
             // txtUSDCanada
             // 
@@ -301,6 +303,7 @@
             this.txtUSDCanada.TabStop = false;
             this.txtUSDCanada.Text = "0.00";
             this.txtUSDCanada.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUSDCanada.TextChanged += new System.EventHandler(this.usdTextChanged);
             // 
             // txtTotalUSD
             // 
@@ -311,6 +314,7 @@
             this.txtTotalUSD.TabIndex = 27;
             this.txtTotalUSD.TabStop = false;
             this.txtTotalUSD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTotalUSD.TextChanged += new System.EventHandler(this.TxtTotalUSD_TextChanged);
             // 
             // label8
             // 
@@ -387,6 +391,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

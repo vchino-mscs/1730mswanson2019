@@ -77,9 +77,24 @@ namespace mswanson1d1
                 ).ToString("0.00");
         }
 
-        private void TxtUSDAustralia_TextChanged(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void TxtTotalUSD_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void usdTextChanged(object sender, EventArgs e)
+        {
+            txtTotalUSD.Text = (
+                   Convert.ToDecimal(txtUSDAustralia.Text)
+                   + Convert.ToDecimal(txtUSDBhutan.Text)
+                   + Convert.ToDecimal(txtUSDCostaRica.Text)
+                   + Convert.ToDecimal(txtUSDCanada.Text)
+                   ).ToString("0.00");
         }
     }
 }
