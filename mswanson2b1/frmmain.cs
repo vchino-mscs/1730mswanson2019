@@ -24,12 +24,7 @@ namespace mswanson2b1
 
         private void txtTotalUSD_TextChanged(object sender, EventArgs e)
         {
-            txtTotalUSD.Text = (
-                Convert.ToDecimal(txtUSDAustralia.Text)
-                + Convert.ToDecimal(txtUSDBhutan.Text)
-                + Convert.ToDecimal(txtUSDCostaRica.Text)
-                + Convert.ToDecimal(txtUSDCanada.Text)
-                ).ToString("0.00");
+            
 
         }
 
@@ -75,6 +70,9 @@ namespace mswanson2b1
             txtUSDCostaRica.Text = usdCostaRica.ToString("0.00");
             txtUSDCanada.Text = usdCanada.ToString("0.00");
 
-            txtTotalUSD.Text = usdAustralia + usdBhutan + usdCostaRica + usdCanada.ToString("0.00");
+            decimal TotalUSD = usdAustralia + usdBhutan + usdCostaRica + usdCanada;
+             txtTotalUSD.Text = TotalUSD.ToString("0.00");
+
         }
     }
+}

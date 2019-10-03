@@ -113,7 +113,7 @@
             this.txtTotalUSD.TabIndex = 56;
             this.txtTotalUSD.TabStop = false;
             this.txtTotalUSD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtTotalUSD.TextChanged += new System.EventHandler(this.txtTotalUSD_TextChanged);
+            this.txtTotalUSD.TextChanged += new System.EventHandler(this.calculate);
             // 
             // txtUSDCanada
             // 
@@ -125,6 +125,7 @@
             this.txtUSDCanada.TabStop = false;
             this.txtUSDCanada.Text = "0.00";
             this.txtUSDCanada.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUSDCanada.TextChanged += new System.EventHandler(this.calculate);
             // 
             // txtUSDCostaRica
             // 
@@ -136,6 +137,7 @@
             this.txtUSDCostaRica.TabStop = false;
             this.txtUSDCostaRica.Text = "0.00";
             this.txtUSDCostaRica.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUSDCostaRica.TextChanged += new System.EventHandler(this.calculate);
             // 
             // txtUSDBhutan
             // 
@@ -147,6 +149,7 @@
             this.txtUSDBhutan.TabStop = false;
             this.txtUSDBhutan.Text = "0.00";
             this.txtUSDBhutan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUSDBhutan.TextChanged += new System.EventHandler(this.calculate);
             // 
             // label7
             // 
@@ -167,6 +170,7 @@
             this.txtUSDAustralia.TabStop = false;
             this.txtUSDAustralia.Text = "0.00";
             this.txtUSDAustralia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUSDAustralia.TextChanged += new System.EventHandler(this.calculate);
             // 
             // txtRateCanada
             // 
@@ -223,6 +227,7 @@
             this.txtAmountCanada.Name = "txtAmountCanada";
             this.txtAmountCanada.Size = new System.Drawing.Size(122, 20);
             this.txtAmountCanada.TabIndex = 37;
+            this.txtAmountCanada.Text = "0.00";
             this.txtAmountCanada.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtAmountCanada.TextChanged += new System.EventHandler(this.calculate);
             // 
@@ -232,6 +237,7 @@
             this.txtAmountCostaRica.Name = "txtAmountCostaRica";
             this.txtAmountCostaRica.Size = new System.Drawing.Size(122, 20);
             this.txtAmountCostaRica.TabIndex = 35;
+            this.txtAmountCostaRica.Text = "0.00";
             this.txtAmountCostaRica.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtAmountCostaRica.TextChanged += new System.EventHandler(this.calculate);
             // 
@@ -241,6 +247,7 @@
             this.txtAmountBhutan.Name = "txtAmountBhutan";
             this.txtAmountBhutan.Size = new System.Drawing.Size(122, 20);
             this.txtAmountBhutan.TabIndex = 32;
+            this.txtAmountBhutan.Text = "0.00";
             this.txtAmountBhutan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtAmountBhutan.TextChanged += new System.EventHandler(this.calculate);
             // 
@@ -250,6 +257,7 @@
             this.txtAmountAustralia.Name = "txtAmountAustralia";
             this.txtAmountAustralia.Size = new System.Drawing.Size(122, 20);
             this.txtAmountAustralia.TabIndex = 31;
+            this.txtAmountAustralia.Text = "0.00";
             this.txtAmountAustralia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtAmountAustralia.TextChanged += new System.EventHandler(this.calculate);
             // 
