@@ -141,5 +141,10 @@ namespace mswanson2E1
                 LogicalOperations.q13(shipState, itemType)
                 ).ToString();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }    
 }

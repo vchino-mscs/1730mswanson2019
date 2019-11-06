@@ -692,6 +692,7 @@
             this.Controls.Add(this.input01aTextBox);
             this.Name = "Form1";
             this.Text = "mswanson2e1 Logical Operators";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
