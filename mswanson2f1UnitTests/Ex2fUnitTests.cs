@@ -1,11 +1,13 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using mswanson2f1;
-namespace mswanson2f1UnitTest
+
+namespace mswanson2f1UnitTests
 {
     [TestClass]
     public class Ex2fUnitTests
     {
+
         [TestMethod]
         public void Test01AInputGE100()
         {

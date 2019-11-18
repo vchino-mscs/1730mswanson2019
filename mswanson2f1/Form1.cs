@@ -17,22 +17,23 @@ namespace mswanson2f1
             InitializeComponent();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            
-            //#1: if
+           
+
+            //#1 If 
             result1TextBox.Text = Ex2fCalculations.Calc01(input1ATextBox.Text);
 
 
-            //#2 if (block)
+            //#2 If {Block}
             result2TextBox.Text = Ex2fCalculations.Calc02(input2ATextBox.Text);
 
 
-            //#3 if else
+            //#3 If statement
             result3TextBox.Text = Ex2fCalculations.Calc03(input3ATextBox.Text);
 
 
-            //#4 if else if else
+            //#4 if else if 
             result4TextBox.Text = Ex2fCalculations.Calc04(input4ATextBox.Text);
 
 
@@ -40,32 +41,24 @@ namespace mswanson2f1
             result5TextBox.Text = Ex2fCalculations.Calc05(input5ATextBox.Text);
 
 
-            //#6 Nested statements
-           result6TextBox.Text = Ex2fCalculations.Calc06(input6ATextBox.Text, input6BTextBox.Text);
+            //#6 Nested if statements
+            result6TextBox.Text = Ex2fCalculations.Calc06(input6ATextBox.Text, input6BTextBox.Text);
 
-            
-            //#7 input validation
+            //#7  // #7 Validate input: non-empty string
             result7TextBox.Text = Ex2fCalculations.Calc07(input7ATextBox.Text);
 
 
-            //#8 Validate input, calculate quantity * price, shipping
+            // #8 Validate input, calculate quantity * price, shipping
             result8TextBox.Text = Ex2fCalculations.Calc08(input8ATextBox.Text, input8BTextBox.Text);
 
 
             // #9 Validate input, calculate difference * rate
             result9TextBox.Text = Ex2fCalculations.Calc09(input9ATextBox.Text, input9BTextBox.Text);
 
+
             // #10 Validate input, divide large num by small
             //     Both numbers must be > 0
             result10TextBox.Text = Ex2fCalculations.Calc10(input10ATextBox.Text, input10BTextBox.Text);
-
-
-
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
         }
     }

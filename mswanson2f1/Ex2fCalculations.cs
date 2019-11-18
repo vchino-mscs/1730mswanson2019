@@ -10,15 +10,15 @@ namespace mswanson2f1
     {
         public static string Calc01(string input)
         {
-            //#1: if
+            // #1: if
             decimal subtotal = 0m;
             decimal discountPercent = 0m;
             subtotal = Decimal.Parse(input);
             if (subtotal >= 100m)
-            discountPercent = 0.2m;
+                discountPercent = 0.2m;
             return discountPercent.ToString("n2");
+        }
 
-            }
         public static string Calc02(string input)
         {
             //#2 if (block)
@@ -37,7 +37,7 @@ namespace mswanson2f1
 
         public static string Calc03(string input)
         {
-            //#3 if else
+            // #3: if else
             decimal subtotal = 0m;
             decimal discountPercent = 0m;
             subtotal = Decimal.Parse(input);
@@ -47,40 +47,37 @@ namespace mswanson2f1
             else
                 discountPercent = 0.1m;
             return discountPercent.ToString("n2");
-
         }
 
         public static string Calc04(string input)
         {
-            //#4 if else if else
+            // #4 if else if
             decimal subtotal = 0m;
             decimal discountPercent = 0m;
             subtotal = Decimal.Parse(input);
             discountPercent = 0m;
-            if (subtotal >= 100m && subtotal < 200m)
+            if (subtotal >= 100 && subtotal < 200m)
                 discountPercent = 0.2m;
-            else if (subtotal >= 200m && subtotal < 300)
+            else if (subtotal >= 200m && subtotal < 300m)
                 discountPercent = 0.3m;
             else if (subtotal >= 300m)
                 discountPercent = 0.4m;
-            else
-                discountPercent = 0.1m;
+            else discountPercent = 0.1m;
             return discountPercent.ToString("n2");
-
         }
 
         public static string Calc05(string input)
         {
-            //#5 Better range test
+            // #5 Better range test
             decimal subtotal = 0m;
             decimal discountPercent = 0m;
             subtotal = Decimal.Parse(input);
             discountPercent = 0m;
-            if (subtotal >= 300m)
+            if (subtotal >= 300)
                 discountPercent = 0.4m;
             else if (subtotal >= 200m)
                 discountPercent = 0.3m;
-            else if (subtotal >= 100)
+            else if (subtotal >= 100m)
                 discountPercent = 0.2m;
             else
                 discountPercent = 0.1m;
@@ -109,80 +106,88 @@ namespace mswanson2f1
 
         public static string Calc07(string input)
         {
-            
             // #7 Validate input: non-empty string
-
             decimal ethereum = 0m;
-            decimal dollars = Decimal.Parse(input);
-
 
             if (input != "")
             {
-             if (dollars >= 100.00m)
-                 ethereum = 200 * dollars;
-                return ethereum.ToString("n2");
+               decimal dollars = Decimal.Parse(input);
+                    ethereum = 200 * dollars;
+                return ethereum.ToString("n2"); 
             }
-
-            else if (input == "")
+            else
                 return "Invalid input";
 
         }
-
         public static string Calc08(string inputA, string inputB)
         {
-
-            // #8 Validate input, calculate quantity * price, shipping4
+            // #8 Validate input, calculate quantity * price, shipping
             decimal total = 0m;
-            decimal Price = Decimal.Parse(inputA);
-            int Quanity = Convert.ToInt32(inputB);
-
-
             if (inputA != "" && inputB != "")
             {
-                if (Price >= 25.00m && Quanity >= 2.00m)
-                    total = Price * Quanity;
+                decimal price = Decimal.Parse(inputA);
+                int quan = Int32.Parse(inputB);
+                total = price * quan;
+             if (total >= 50.00m)
+                return total.ToString("n2");
+             else
+                 total = price * quan + 5.00m;
                 return total.ToString("n2");
             }
 
-            else if (Price <= 24.99m && Quanity >= 2.00m)
-                total = Price * Quanity + 5.00m;
-            return total.ToString("n2");
-
-            else if (inputA == "25.00" && inputB == "")
+            else
                 return "Invalid input";
-
-            return total.ToString("n2");
-
-
+            
         }
 
         public static string Calc09(string inputA, string inputB)
         {
             // #9 Validate input, calculate difference * rate
-            
+            decimal total = 0m;
+            if (inputA != "" && inputB != "")
+            {
+                decimal previous = Decimal.Parse(inputA);
+                decimal next = Decimal.Parse(inputB);
+                total = (next - previous) * 0.1m;
 
+                if(next > previous)
+                    return total.ToString("n2"); 
+                else
+                 return "Invalid input";
+            }
+            
+            else
+            return "Invalid input";
         }
 
         public static string Calc10(string inputA, string inputB)
         {
             // #10 Validate input, divide large num by small
             //     Both numbers must be > 0
-
             decimal total = 0m;
-            int large = Convert.ToInt32(inputB);
-            int small = Convert.ToInt32(inputA);
 
-            if ( large > 4m &&  small > 2m)
-
+            if (inputA != "" && inputB != "")
             {
-                total = large / small;
-                return total.ToString("2n");
+                int a = Convert.ToInt32(inputA);
+                int b = Convert.ToInt32(inputB);
+                total = a / b;
+                if (a > 0 && b > 0)
+                {
+                    if (a > b)
+                       
+                    return total.ToString("n2");
+                    else
+                        total = b / a;
+                    return total.ToString("n2");
+                    
+                }
+                else
+                    return "Invalid input";
             }
-
-            if (large = 2m && small = 4m)
-            return "Invalid input";
-
+            else
+                return "Invalid input";
         }
+        
 
     }
 }
